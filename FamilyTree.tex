@@ -1,0 +1,428 @@
+\documentclass[portrait, posterdraft]{a0poster}
+%\documentclass[]{tikzposter}
+%\setlength{\paperwidth}{48in} % A0 width: 46.8in
+%\setlength{\paperheight}{36in} % A0 height: 33.1in
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+%\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm,paperwidth=36in, paperheight=68in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usepackage{wrapfig}
+
+\usetikzlibrary{arrows}
+\usetikzlibrary{positioning}
+
+\tikzstyle{block} = [rectangle, draw, fill=blue!20, 
+    text width=8em, text centered, rounded corners, minimum height=3em, font=\tiny]
+\tikzstyle{bio} = [rectangle, draw, fill=green!20, 
+    text width=30em, rounded corners, minimum height=4em, font=\tiny]
+
+\tikzstyle{line} = [draw, very thick, -latex']
+
+    
+%\usetheme{Basic}
+
+\begin{document}
+%\begin{center}
+\begin{tikzpicture}[node distance = 1.9cm and 2cm]
+    % Place nodes
+	
+	% I started this relative to me, oops.
+	\node [block] (turner) {Colin Turner \\ Queen's University Belfast \\ 1997};
+	
+	% My (CT's) PhD students
+	\node [block, below left = of turner] (jamison) {Colin Jamison \\ University of Ulster \\ 2003};
+	\node [block, left=of jamison] (parades) {Cesar Navarro Parades \\ University of Ulster \\ 2003};
+	\node [block, right=of jamison] (dimiao) {Rebecca di Miao \\ University of Ulster \\ 2008};
+	\node [block, right=of dimiao] (vock) {Stephan Vock \\ University of Ulster \\ 2015};
+	
+	% Brian's other PhD students
+
+	\node [block, left=of turner] (marron) {Dermot Marron \\ Queen's University Belfast \\ 1996};
+    \node [block, left=of marron] (matthews) {Patricia Matthews \\ Queen's University Belfast \\ 1994};
+    \node [block, left=of matthews] (matier) {Julie Matier \\ Queen's University Belfast \\ 1991};
+	\node [block, right=of turner] (hanna) {Alan Hanna \\ Queen's University Belfast \\ 1999};
+	\node [block, right=of hanna] (gormley) {Michael Gormley \\ Queen's University Belfast \\ 2001};
+	\node [block, right=of gormley] (calder) {Christopher Calder \\ Queen's University Belfast \\ 2007};
+	\node [block, right=of calder] (arbuthnot) {Dean Arbuthnot \\ Queen's University Belfast \\ 2009};
+	
+	% Brian and above
+	\node [block, above=of turner] (mcmaster) {Brian McMaster \\ Queen's University Belfast \\ 1972};
+	\node [block, above=of mcmaster] (burgess) {Derek Burgess \\ University of Cambridge \\ 1951};
+	\node [block, above=of burgess] (smithies) {Frank Smithies \\ University of Cambridge \\ 1937};
+	\node [block, above=of smithies] (hardy) {G.H. Hardy \\ University of Cambridge \\ };
+	
+	% Two advisors
+	\node [block, above=of hardy] (whittaker) {Edmund Whittaker \\ University of Cambridge \\ 1895};
+	\node [block, left=of whittaker] (love) {Augustus Edward Hough Love \\ ETH Z{\" u}rich};	
+
+	% Two advisors
+	\node [block, above left=of whittaker] (forsyth) {Andrew Russell Forsyth \\ University of Cambridge \\ 1881};
+	\node [block, above right=of whittaker] (darwin) {George Howard Darwin \\ University of Cambridge \\ 1871};
+	
+	\node [block, above=of darwin] (routh) {Edward John Routh \\ University of Cambridge \\ 1857};
+	\node [block, above=of forsyth] (cayley) {Athur Cayley \\ University of Oxford / \\ University College Dublin / \\ Universiteit Leiden \\ 1864,1865,1875};
+	
+	
+	
+	\node [block, above right=of routh] (todhunter) {Isaac Todhunter};	
+	\node [block, above right=of cayley] (hopkins) {William Hopkins \\ University of Cambridge \\ 1830};
+	\node [block, above=of hopkins] (sedgwick) {Adam Sedgwick \\ University of Cambridge \\ 1811};
+	\node [block, above=of sedgwick] (jones) {Thomas Jones \\ University of Cambridge \\ 1782};
+	\node [block, right= of jones] (dawson) {John Dawson};
+	\node [block, above=of dawson] (waring) {Edward Waring};
+	\node [block, right=of waring] (bracken) {Henry Bracken};
+	
+
+	\node [block, above=of jones] (postlethwaite) {Thomas Postlethwaite \\ University of Cambridge \\ 1756};
+	\node [block, left=of postlethwaite] (cranke) {John Cranke \\ University of Cambridge \\ 1774};
+	\node [block, above=of postlethwaite] (whisson) {Stephen Whisson\\ University of Cambridge \\ 1742};
+	\node [block, above=of whisson] (taylor) {Walter Taylor \\ University of Cambridge \\ 1723};
+	\node [block, above=of taylor] (smith) {Robert Smith \\ University of Cambridge \\ 1715};
+	\node [block, above=of smith] (cotes) {Roger Cotes \\ University of Cambridge \\ 1706};
+	\node [block, above=of cotes] (newton) {Isaac Newton \\University of Cambridge \\ 1668};
+	\node [block, above=of newton] (barrow) {Isaac Barrow \\University of Cambridge \\ 1652};
+	\node [block, right=of barrow] (pulleyn) {Benjamin Pulleyn};		
+	\node [block, above=of barrow] (viviani) {Vincenzio Viviani};
+	\node [block, right=of viviani] (roberval) {Gilles Personne de Roberval};
+	\node [block, above=of roberval] (mersenne) {Marin Mersenne \\ Université Paris IV-Sorbonne \\ 1611};
+	
+	\node [block, above=of viviani] (galileo) {Galileo Galilei \\University of Pisa};
+	\node [block, above=of galileo] (ricci) {Ostilio Ricci \\Universita' di Bresia};
+	\node [block, above=of ricci] (fontana) {Niccolò Fontana Tartaglia \\Universita' di Bresia};
+
+	% Biographies
+	
+\node [bio, right= 2 cm of fontana, text width=30 em] (fontanabio) {
+%\includegraphics[width=3 cm]{fontana.jpg}
+\textbf{Niccolò Fontana Tartaglia (1499/1500 in Brescia – 13 December 1557 in Venice)} was an Italian mathematician, engineer (designing fortifications), a surveyor (of topography, seeking the best means of defense or offense) and a bookkeeper from the then-Republic of Venice (now part of Italy). He published many books, including the first Italian translations of Archimedes and Euclid, and an acclaimed compilation of mathematics. Tartaglia was the first to apply mathematics to the investigation of the paths of cannonballs, known as ballistics, in his Nova Scientia, ``A New Science;'' his work was later partially validated and partially superseded by Galileo's studies on falling bodies. He also published a treatise on retrieving sunken ships. 
+};
+
+\node [right=of fontanabio]
+{
+\includegraphics[width=4cm]{fontana.jpg}
+};
+
+  
+\node [bio, left= 2 cm of ricci] (riccibio) {
+\textbf{Ostilio Ricci (1540–1603)} was an Italian mathematician. A university professor in Florence at the Accademia delle Arti del Disegno, founded in 1560 by Giorgio Vasari. Ricci is also known for being Galileo Galilei's teacher.
+Ricci was Court Mathematician to the Grand Duke Francesco in Florence, in 1580, when Galileo attended his lectures in Pisa.
+Ricci taught Galileo the mathematics of Euclid and Archimedes, who both deeply influenced Galileo's later work.
+};
+
+\node [left=of riccibio]
+{
+\includegraphics[width=4cm]{ricci.png}
+};
+
+\node [bio, right=2 cm of ricci] (galileobio) {
+\textbf{Galileo Galilei (15 February 1564 – 8 January 1642)}, was an Italian astronomer, physicist, engineer, philosopher, and mathematician who played a major role in the scientific revolution during the Renaissance. Galileo has been called the ``father of observational astronomy'', the ``father of modern physics'', and the ``father of science''. His contributions to observational astronomy include the telescopic confirmation of the phases of Venus, the discovery of the four largest satellites of Jupiter (named the Galilean moons in his honour), and the observation and analysis of sunspots. Galileo also worked in applied science and technology, inventing an improved military compass and other instruments.
+It was while Galileo was under house arrest that he wrote one of his most well known works, Two New Sciences. Here he summarized the work he had done some forty years earlier, on the two sciences now called kinematics and strength of materials.
+};
+
+\node [right=of galileobio]
+{
+\includegraphics[width=4cm]{galileo.jpg}
+};
+
+\node [bio, left=2 cm of viviani] (vivianibio) {
+\textbf{Vincenzo Viviani (April 5, 1622 – September 22, 1703)} was an Italian mathematician and scientist. ed at a Jesuit school. There, Grand Duke Ferdinando II de' Medici furnished him a scholarship to purchase mathematical books. He became a pupil of Evangelista Torricelli and worked on physics and geometry.  In 1639, at the age of 17, he was an assistant of Galileo Galilei in Arcetri. He remained a disciple until Galileo's death in 1642. From 1655 to 1656, Viviani edited the first edition of Galileo's collected works.
+In 1660, Viviani and Giovanni Alfonso Borelli conducted an experiment to determine the speed of sound. In 1687, he published a book on engineering, Discorso intorno al difendersi da' riempimenti e dalle corrosione de' fiumi.
+};
+
+\node [left=of vivianibio]
+{
+\includegraphics[width=4cm]{viviani.jpg}
+};
+
+\node [bio, right=2 cm of mersenne, text width=20em] (mersennebio) {
+\textbf{Marin Mersenne, Marin Mersennus or le Père Mersenne (8 September 1588 – 1 September 1648)} was a French theologian, philosopher, mathematician and music theorist, often referred to as the ``father of acoustics''. Mersenne, an ordained priest, had many contacts in the scientific world and has been called ``the center of the world of science and mathematics during the first half of the 1600s.''};
+
+\node [right=2 cm of mersennebio]
+{
+\includegraphics[width=4cm]{mersenne.jpg}
+};
+
+\node [bio, below=2 cm of mersennebio, text width=20 em] (robervalbio) {
+\textbf{Gilles Personne de Roberval (August 10, 1602 – October 27, 1675)}, French mathematician, was born at Roberval, Oise, near Beauvais, France. His name was originally Gilles Personne or Gilles Personier, with Roberval the place of his birth.
+
+Like René Descartes, he was present at the siege of La Rochelle in 1627. In the same year he went to Paris, and in 1631 he was appointed the philosophy chair at Gervais College. Two years after that, in 1633, he was also made the chair of mathematics at the Royal College of France. A condition of tenure attached to this particular chair was that the holder (Roberval, in this case) would propose mathematical questions for solution, and should resign in favour of any person who solved them better than himself. Notwithstanding this, Roberval was able to keep the chair till his death.
+};
+
+\node [right=of robervalbio]
+{
+\includegraphics[width=4cm]{roberval.jpg}
+};
+
+\node [bio, left=2 cm of barrow] (barrowbio) {
+\textbf{Isaac Barrow (October 1630 – 4 May 1677)} was an an English Christian theologian and mathematician who is generally given credit for his early role in the development of infinitesimal calculus; in particular, for the discovery of the fundamental theorem of calculus. His work centered on the properties of the tangent; Barrow was the first to calculate the tangents of the kappa curve. Isaac Newton was a student of Barrow's, and Newton went on to develop calculus in a modern form. The lunar crater Barrow is named after him.
+};
+
+\node [left=of barrowbio]
+{
+\includegraphics[width=4cm]{barrow.jpg}
+};
+
+\node [bio, right=2 cm of newton] (pulleynbio) {
+\textbf{Benjamin Pulleyn (died 1690)} was the Cambridge tutor of Isaac Newton. Pulleyn served as Regius Professor of Greek from 1674 to 1686. He was known as a ``pupil monger'', meaning one who increased his income by accepting additional students.
+
+Pulleyn was admitted as a sizar to Trinity College, Cambridge in 1650, became a scholar there in 1651 and graduated BA in 1653-4, MA in 1657. He became a Fellow of Trinity in 1656. Appointed Regius Professor of Greek in 1674, he became Rector of Southoe on his retirement from the chair in 1686.
+};
+
+\node [bio, left=2 cm of cotes] (newtonbio) {
+\textbf{Sir Isaac Newton FRS (25 December 1642 – 20 March 1726/27)} was an an English physicist and mathematician (described in his own day as a ``natural philosopher'') who is widely recognised as one of the most influential scientists of all time and a key figure in the scientific revolution. His book Philosophiæ Naturalis Principia Mathematica (``Mathematical Principles of Natural Philosophy''), first published in 1687, laid the foundations for classical mechanics. Newton made seminal contributions to optics, and he shares credit with Gottfried Wilhelm Leibniz for the development of calculus.
+
+Newton's Principia formulated the laws of motion and universal gravitation, which dominated scientists' view of the physical universe for the next three centuries. By deriving Kepler's laws of planetary motion from his mathematical description of gravity, and then using the same principles to account for the trajectories of comets, the tides, the precession of the equinoxes, and other phenomena, Newton removed the last doubts about the validity of the heliocentric model of the Solar System. This work also demonstrated that the motion of objects on Earth and of celestial bodies could be described by the same principles. His prediction that Earth should be shaped as an oblate spheroid was later vindicated by the measurements of Maupertuis, La Condamine, and others, which helped convince most Continental European scientists of the superiority of Newtonian mechanics over the earlier system of Descartes.
+
+Newton built the first practical reflecting telescope and developed a theory of colour based on the observation that a prism decomposes white light into the many colours of the visible spectrum. He formulated an empirical law of cooling, studied the speed of sound, and introduced the notion of a Newtonian fluid. In addition to his work on calculus, as a mathematician Newton contributed to the study of power series, generalised the binomial theorem to non-integer exponents, developed a method for approximating the roots of a function, and classified most of the cubic plane curves.
+
+Newton was a fellow of Trinity College and the second Lucasian Professor of Mathematics at the University of Cambridge. He was a devout but unorthodox Christian, and, unusually for a member of the Cambridge faculty of the day, he refused to take holy orders in the Church of England, perhaps because he privately rejected the doctrine of the Trinity. Beyond his work on the mathematical sciences, Newton dedicated much of his time to the study of biblical chronology and alchemy, but most of his work in those areas remained unpublished until long after his death. In his later life, Newton became president of the Royal Society. Newton served the British government as Warden and Master of the Royal Mint.
+};
+
+\node [left=of newtonbio]
+{
+\includegraphics[width=4cm]{newton.jpg}
+};
+
+\node [bio, right=2 cm of cotes] (cotesbio) {
+\textbf{Roger Cotes FRS (10 July 1682 – 5 June 1716)} was an English mathematician, known for working closely with Isaac Newton by proofreading the second edition of his famous book, the Principia, before publication. He also invented the quadrature formulas known as Newton–Cotes formulas and first introduced what is known today as Euler's formula. He was the first Plumian Professor at Cambridge University from 1707 until his death.
+};
+
+\node [right=of cotesbio]
+{
+\includegraphics[width=4cm]{cotes.png}
+};
+
+\node [bio, left=2 cm of taylor] (smithbio) {
+\textbf{Robert Smith (1689 – 2 February 1768)} was an English mathematician and music theorist.
+
+Smith was probably born at Lea near Gainsborough, the son of the rector of Gate Burton, Lincolnshire. After attending Queen Elizabeth's Grammar School, Gainsborough (now Queen Elizabeth's High School) he entered Trinity College, Cambridge, in 1708, and becoming minor fellow in 1714, major fellow in 1715 and senior fellow in 1739, was chosen Master in 1742, in succession to Richard Bentley. From 1716 to 1760 he was Plumian Professor of Astronomy, and he died in the Master's Lodge at Trinity.
+};
+
+\node [left=of smithbio]
+{
+\includegraphics[width=4cm]{smith.jpg}
+};
+
+\node [bio, right=2 cm of taylor] (taylorbio) {
+\textbf{Walter Taylor (c. 1700 – 23 February 1743/4)} was a Trinity College, Cambridge tutor who coached 83 students in the 1724–1743 period. He later was appointed as the Regius Professor of Greek.
+
+He was the son of John Taylor, Vicar of Tuxford, Nottinghamshire. He matriculated in 1716 from Wakefield School, Yorkshire. Taylor was admitted as a pensioner at Trinity on 7 April 1716.
+};
+
+\node [bio, left=2 cm of whisson] (whissonbio) {
+\textbf{Stephen Whisson (1710[1] – 3 November 1783)} was a tutor at Trinity College, Cambridge, United Kingdom, and coached 72 students in the 1744-1754 period.
+
+Wisson was from St Neots, Huntingdonshire and was the son of a publican. In 1735, he matriculated from Wakefield School, Yorkshire.
+
+On 29 November 1734, he was admitted as a sizar at Trinity College, Cambridge, becoming a scholar in 1738.
+};
+
+\node [bio, left=2 cm of cranke] (postlethwaitebio) {
+\textbf{Thomas Postlethwaite (1731 – 4 May 1798)} was an English clergyman and Cambridge fellow, Master of Trinity College, Cambridge from 1789 to 1798. He was the son of Richard Postlethwaite of Crooklands, near Milnthorpe, Westmorland. He went to school in St Bees before entering Trinity College, Cambridge as a sizar in 1749. Graduating BA in 1753, he became a fellow of Trinity in 1755. He was Barnaby lecturer in Mathematics in 1758. Ordained in 1756, he was from 1774 until his death Rector of Hamerton. He was appointed Master of Trinity in 1789, and in 1791 served as university Vice-Chancellor. He died at Bath on 4 May 1798 and is buried in Bath Abbey church. He is mainly remembered for depriving the Cambridge classicist Richard Porson of his income, apparently in an attempt to force him to take Holy Orders.};
+
+\node [bio, left=2 cm of jones] (crankebio) {
+\textbf{John Cranke (1746–1816)} was an English scientific thinker and clergyman, particularly notable for starting a scientific genealogy producing thirteen Nobel Prize winners in total. Cranke was admitted as a sizar at the age of 21 into Trinity College, University of Cambridge on July 1, 1767, after graduating from Sedbergh School. His father was James Cranke, a notable artist who has an entry in Redgrave's Century of English Painters.
+};
+
+\node [bio, below= of taylorbio] (waringbio) {
+\textbf{Edward Waring FRS (c.1736 – 15 August 1798)} was an English mathematician. He entered Magdalene College, Cambridge as a sizar and became Senior wrangler in 1757. He was elected a Fellow of Magdalene and in 1760 Lucasian Professor of Mathematics, holding the chair until his death. He made the assertion known as Waring's problem without proof in his writings Meditationes Algebraicae. Waring was elected a Fellow of the Royal Society in 1763 and awarded the Copley Medal in 1784.
+};
+
+\node [right=of waringbio]
+{
+\includegraphics[width=4cm]{waring.jpg}
+};
+
+\node [bio, right=2 cm of dawson, text width=20 em] (dawsonbio) {
+\textbf{John Dawson (1734 – 19 September 1820)} was both a mathematician and surgeon. He was born at Raygill in Garsdale, then in the West Riding of Yorkshire, where ``Dawson's Rock'' celebrates the site of his early thinking about conic sections. After learning surgery from Henry Bracken of Lancaster, he worked as a surgeon in Sedbergh for a year, then went to study medicine at Edinburgh, walking 150 miles there with his savings stitched into his coat. 
+Dawson published The Doctrine of Philosophical Necessity Briefly Invalidated in 1781, arguing against Joseph Priestley's doctrine of Philosophical Necessity, but his main skill was in Mathematics. He was a private tutor to many undergraduates at the University of Cambridge where his pupils included twelve Senior Wranglers between 1781 and 1807. 
+};
+
+\node [right=of dawsonbio]
+{
+\includegraphics[width=4cm]{dawson.jpg}
+};
+
+\node [bio, left=2 cm of sedgwick] (sedgwickbio) {
+\textbf{Adam Sedgwick (22 March 1785 – 27 January 1873)} was one of the founders of modern geology. He proposed the Devonian period of the geological timescale. Later, he proposed the Cambrian period, based on work which he did on Welsh rock strata. Though he had guided the young Charles Darwin in his early study of geology and continued to be on friendly terms, he was an opponent of Darwin's theory of evolution by means of natural selection.
+};
+
+\node [left=of sedgwickbio]
+{
+\includegraphics[width=4cm]{sedgwick.jpg}
+};
+
+\node [bio, left=2 cm of hopkins] (hopkinsbio) {
+\textbf{William Hopkins FRS (2 February 1793 – 13 October 1866)} was an English mathematician and geologist. He also made important contributions in asserting a solid, rather than fluid, interior for the Earth and explaining many geological phenomena in terms of his model. However, though his conclusions proved to be correct, his mathematical and physical reasoning were subsequently seen as unsound. Among his more famous pupils were \textbf{Lord Kelvin, James Clerk Maxwell and Isaac Todhunter}. Francis Galton praised his teaching style.
+};
+
+\node [bio, above=1 cm of todhunter] (todhunterbio) {
+\textbf{Isaac Todhunter FRS (23 November 1820 – 1 March 1884)}, was an English mathematician who is best known today for the books he wrote on mathematics and its history.  In 1862 he was made a fellow of the Royal Society, and in 1865 a member of the Mathematical Society of London. In 1871 he gained the Adams Prize and was elected to the council of the Royal Society. He was elected honorary fellow of St John's in 1874, having resigned his fellowship on his marriage in 1864. In 1880 his eyesight began to fail, and shortly afterwards he was attacked with paralysis.
+};
+
+\node [right=of todhunterbio]
+{
+\includegraphics[width=4cm]{todhunter.jpg}
+};
+
+\node [bio, left=2 cm of cayley, text width=20 em] (cayleybio) {
+\textbf{Arthur Cayley FRS (16 August 1821 – 26 January 1895)} was a British mathematician. He helped found the modern British school of pure mathematics. He excelled in Greek, French, German, and Italian, as well as mathematics. He worked as a lawyer for 14 years. He postulated the Cayley–Hamilton theorem—that every square matrix is a root of its own characteristic polynomial, and verified it for matrices of order 2 and 3. He was the first to define the concept of a group in the modern way—as a set with a binary operation satisfying certain laws. Formerly, when mathematicians spoke of ``groups'', they had meant permutation groups. Cayley's theorem is named in honour of Cayley.};
+
+\node [left=of cayleybio]
+{
+\includegraphics[width=4cm]{cayley.jpg}
+};
+
+\node [bio, left=2 cm of forsyth] (forsythbio) {
+\textbf{Andrew Russell Forsyth FRS (18 June 1858, Glasgow – 2 June 1942, South Kensington)} was a British mathematician. He was elected a fellow of Trinity and then appointed to the chair of mathematics at the University of Liverpool at the age of 24. He returned to Cambridge as a lecturer in 1884 and became Sadleirian Professor of Pure Mathematics in 1895. Forsyth became professor at the Imperial College of Science in 1913 and retired in 1923, remaining mathematically active into his seventies. He was elected a Fellow of the Royal Society in 1886 and won its Royal Medal in 1897.
+};
+
+\node [bio, right=2 cm of routh, text width=20 em] (routhbio) {
+\textbf{Edward John Routh FRS (20 January 1831 – 7 June 1907)}, was an English mathematician, noted as the outstanding coach of students preparing for the Mathematical Tripos examination of the University of Cambridge in its heyday in the middle of the nineteenth century. He also did much to systematise the mathematical theory of mechanics and created several ideas critical to the development of modern control systems theory.
+};
+
+\node [right=of routhbio]
+{
+\includegraphics[width=4cm]{routh.jpg}
+};
+
+\node [bio, below=1 cm of routhbio, text width=20 em] (darwinbio) {
+\textbf{Sir George Howard Darwin KCB FRS FRSE} (9 July 1845 – 7 December 1912) was an English barrister, astronomer and mathematician. George Darwin was the second son and fifth child of \textbf{Charles Darwin}. He was elected a Fellow of the Royal Society in June 1879 and won their Royal Medal in 1884 and their Copley Medal in 1911. He delivered their Bakerian Lecture in 1891 on the subject of ``tidal prediction''. In 1883 Darwin became Plumian Professor of Astronomy and Experimental Philosophy at the University of Cambridge. He studied tidal forces involving the Sun, Moon, and Earth, and formulated the fission theory of Moon formation. Darwin won the Gold Medal of the Royal Astronomical Society in 1892, and also later (1899–1901) served as president of that organisation.
+};
+
+\node [right=of darwinbio]
+{
+\includegraphics[width=4cm]{darwin.jpg}
+};
+
+\node [bio, right=2 cm of hardy] (whittakerbio) {
+\textbf{Edmund Taylor Whittaker FRS FRSE (24 October 1873 – 24 March 1956)} was an English mathematician who contributed widely to applied mathematics, mathematical physics and the theory of special functions. He had a particular interest in numerical analysis, but also worked on celestial mechanics and the history of physics. Near the end of his career he received the Copley Medal, the most prestigious honorary award in British science. The School of Mathematics of the University of Edinburgh holds The Whittaker Colloquium, a yearly lecture in his honour.
+};
+
+\node [right=of whittakerbio]
+{
+\includegraphics[width=4cm]{whittaker.jpg}
+};
+
+\node [bio, below=1 cm of forsythbio] (lovebio) {
+\textbf{Augustus Edward Hough Love FRS (17 April 1863, Weston-super-Mare – 5 June 1940, Oxford)}, often known as A. E. H. Love, was a mathematician famous for his work on the mathematical theory of elasticity. He also worked on wave propagation and his work on the structure of the Earth in Some Problems of Geodynamics won for him the Adams prize in 1911 when he developed a mathematical model of surface waves known as Love waves. This work was published as a book with the help of the Cambridge University Press in 1911. It was published again in 1967 by Dover, New York, USA. Love waves were discussed in Chapter 11 of this book. Love also contributed to the theory of tidal locking and introduced the parameters known as Love numbers, which are widely used today. These numbers are also used in problems related to the tidal deformation of the Earth due to the gravitational attraction of the Moon and Sun. His other awards include the Royal Society Royal Medal in 1909 and Sylvester Medal in 1937, the London Mathematical Society De Morgan Medal in 1926. He was secretary to the London Mathematical Society between 1895 and 1910, and president for 1912–1913.
+};
+
+\node [bio, right=2 cm of burgess] (hardybio) {
+\textbf{Godfrey Harold (``G. H.'') Hardy FRS (7 February 1877 – 1 December 1947)} was an English mathematician, known for his achievements in number theory and mathematical analysis.
+
+G. H. Hardy is usually known by those outside the field of mathematics for his essay from 1940 on the aesthetics of mathematics, A Mathematician's Apology, which is often considered one of the best insights into the mind of a working mathematician written for the layman.
+
+Starting in 1914, Hardy was the mentor of the Indian mathematician Srinivasa Ramanujan, a relationship that has become celebrated. Hardy almost immediately recognised Ramanujan's extraordinary albeit untutored brilliance, and Hardy and Ramanujan became close collaborators. In an interview by Paul Erdős, when Hardy was asked what his greatest contribution to mathematics was, Hardy unhesitatingly replied that it was the discovery of Ramanujan. He called their collaboration``the one romantic incident in my life.''
+
+Hardy is credited with reforming British mathematics by bringing rigour into it, which was previously a characteristic of French, Swiss and German mathematics. British mathematicians had remained largely in the tradition of applied mathematics, in thrall to the reputation of Isaac Newton (see Cambridge Mathematical Tripos). Hardy was more in tune with the cours d'analyse methods dominant in France, and aggressively promoted his conception of pure mathematics, in particular against the hydrodynamics which was an important part of Cambridge mathematics.
+};
+
+\node [right=of hardybio]
+{
+\includegraphics[width=4cm]{hardy.jpg}
+};
+
+\node [bio, left=2 cm of smithies] (smithiesbio) {
+\textbf{Frank Smithies FRSE (10 March 1912, Edinburgh, Scotland – 16 November 2002, Cambridge, England)} was a British mathematician who worked on integral equations, functional analysis, and the history of mathematics. He was elected as a fellow of the Royal Society of Edinburgh in 1961. He was an alumnus and an academic of Cambridge University.
+};
+
+\node [left=of smithiesbio]
+{
+\includegraphics[width=4cm]{smithies.jpg}
+};
+  
+%  \node (myfirstpic) at (0,0) {\includegraphics[width=0.001 cm]{fontana.jpg}};
+
+
+
+	
+	% Draw edges
+	
+    \path [line] (parades) -- (turner);
+    \path [line] (jamison) -- (turner);
+    \path [line] (dimiao) -- (turner);
+    \path [line] (vock) -- (turner);
+
+
+    \path [line] (matier) -- (mcmaster);
+    \path [line] (matthews) -- (mcmaster);
+    \path [line] (marron) -- (mcmaster);
+    \path [line] (hanna) -- (mcmaster);
+    \path [line] (gormley) -- (mcmaster);
+    \path [line] (calder) -- (mcmaster);
+    \path [line] (arbuthnot) -- (mcmaster);
+
+	
+    \path [line] (turner) -- (mcmaster);
+	\path [line] (mcmaster) -- (burgess);
+	\path [line] (burgess) -- (smithies);
+	\path [line] (smithies) -- (hardy);
+	\path [line] (hardy) -- (love);
+	\path [line] (hardy) -- (whittaker);
+
+	\path [line] (whittaker) -- (forsyth);
+	\path [line] (whittaker) -- (darwin);
+	\path [line] (forsyth) -- (cayley);
+	\path [line] (darwin) -- (routh);
+	
+	\path [line] (routh) -- (hopkins);
+	\path [line] (routh) -- (todhunter);
+
+	\path [line] (cayley) -- (hopkins);
+	\path [line] (hopkins) -- (sedgwick);
+	\path [line] (sedgwick) -- (jones);
+	\path [line] (sedgwick) -- (dawson);
+	\path [line] (dawson) -- (waring);
+	\path [line] (dawson) -- (bracken);
+
+
+	
+	\path [line] (jones) -- (postlethwaite);
+	\path [line] (jones) -- (cranke);
+	\path [line] (postlethwaite) -- (whisson);
+	\path [line] (whisson) -- (taylor);
+	\path [line] (taylor) -- (smith);
+	\path [line] (smith) -- (cotes);
+	\path [line] (cotes) -- (newton);
+	\path [line] (newton) -- (barrow);
+	\path [line] (newton) -- (pulleyn);
+	\path [line] (barrow) -- (viviani);
+	\path [line] (barrow) -- (roberval);
+	\path [line] (roberval) -- (mersenne);
+	\path [line] (viviani) -- (galileo);
+	\path [line] (galileo) -- (ricci);
+	\path [line] (ricci) -- (fontana);
+	
+	% Redraw nodes that get lines over them
+ 
+	% My (CT's) PhD students
+	\node [block, below left = of turner] (jamison) {Colin Jamison \\ University of Ulster \\ 2003};
+	\node [block, left=of jamison] (parades) {Cesar Navarro Parades \\ University of Ulster \\ 2003};
+	\node [block, right=of jamison] (dimiao) {Rebecca di Miao \\ University of Ulster \\ 2008};
+	\node [block, right=of dimiao] (vock) {Stephan Vock \\ University of Ulster \\ 2015};
+	
+	% Brian's other PhD students
+
+	\node [block, left=of turner] (marron) {Dermot Marron \\ Queen's University Belfast \\ 1996};
+    \node [block, left=of marron] (matthews) {Patricia Matthews \\ Queen's University Belfast \\ 1994};
+    \node [block, left=of matthews] (matier) {Julie Matier \\ Queen's University Belfast \\ 1991};
+	\node [block, right=of turner] (hanna) {Alan Hanna \\ Queen's University Belfast \\ 1999};
+	\node [block, right=of hanna] (gormley) {Michael Gormley \\ Queen's University Belfast \\ 2001};
+	\node [block, right=of gormley] (calder) {Christopher Calder \\ Queen's University Belfast \\ 2007};
+	\node [block, right=of calder] (arbuthnot) {Dean Arbuthnot \\ Queen's University Belfast \\ 2009};
+ 
+ 
+\end{tikzpicture}
+%\end{center}
+
+\vfill
+Sources:
+\begin{itemize}
+\item The Mathematics Genealogy Project
+\item Wikipedia entries for given individuals
+\item Biography of Frank Smithies from St. Andrews
+\end{itemize}
+\vspace{3 cm}
+\end{document}
