@@ -6,7 +6,7 @@ Constructed from the Mathematical Genealogy Project.
 
 https://www.piglets.org/blog/2010/12/17/the-academic-descent-to-me/
 
-Essentiall the following typeset in LaTeX.
+Essentially the following typeset in LaTeX.
 
     Colin Turner, Queen’s University of Belfast, 1997
     Brian McMaster, Queen’s University of Belfast, 1972
